@@ -1,5 +1,16 @@
 {% extends "base.html" %}
 {% load static %}
+
+{% block sidebar %}
+<li><a class="active"  href="{% url 'index' %}">Home</a></li>
+<li><a href="{% url 'about' %}">About Us</a></li>
+<li><a href="{% url 'services' %}">Our Services</a></li>
+<li><a href="{% url 'barbers' %}">Our Barbers</a></li>
+<li><a href="{% url 'appointment' %}">Appointment</a></li>
+<li><a href="{% url 'contact' %}">Contact</a></li>
+{% endblock %}
+
+
 {% block content %}
 <!-- Page Content -->
 <div id="page-content-wrapper">
