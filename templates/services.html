@@ -55,50 +55,30 @@
 
                     <div class="row">
                         <div class="col-md-6">
+                            {% for service in services_1 %}
                             <div class="service-wrap clearfix">
-                                <img src="{% static 'uploads/barber_service_01.jpg' %}" alt="" class="img-responsive img-rounded alignleft">
-                                <h4>beard, mustache care</h4>
-                                <p>Etiam materials ut mollis tellus, vel posuere nulla. Etiam sit amet massa sodales aliquam at eget quam. Integer ultricies et magna quis.</p>
+                                <img src="{{ service.image.url }}" alt="" class="img-responsive img-rounded alignleft">
+                                <h4>{{ service.title }}</h4>
+                                <p>{{ service.description }}</p>
                             </div><!-- end issue -->
-
-                            <div class="service-wrap clearfix">
-                                <img src="{% static 'uploads/barber_service_02.jpg' %}" alt="" class="img-responsive img-rounded alignleft">
-                                <h4>detailed feather cleaning</h4>
-                                <p>Etiam materials ut mollis tellus, vel posuere nulla. Etiam sit amet lacus vitae massa sodales aliquam at eget quam. Integer ultricies et magna quis.</p>
-                            </div><!-- end issue -->
-
-                            <div class="service-wrap lastchild clearfix">
-                                <img src="{% static 'uploads/barber_service_03.jpg'%}" alt="" class="img-responsive img-rounded alignleft">
-                                <h4>facial and skin care</h4>
-                                <p>Etiam materials ut mollis tellus, vel posuere nulla. Etiam sit amet lacus vitae massa sodales aliquam at eget quam. Integer ultricies et magna quis.</p>
-                            </div><!-- end issue -->
+                            {% endfor %}
                         </div><!-- end col -->
 
                         <div class="col-md-6">
+                           {% for service in services_2 %}
                             <div class="service-wrap clearfix">
-                                <img src="{% static 'uploads/barber_service_04.jpg' %}" alt="" class="img-responsive img-rounded alignleft">
-                                <h4>studio shots</h4>
-                                <p>Etiam materials ut mollis tellus, vel posuere nulla. Etiam sit amet massa sodales aliquam at eget quam. Integer ultricies et magna quis.</p>
+                                <img src="{{ service.image.url }}" alt="" class="img-responsive img-rounded alignleft">
+                                <h4>{{ service.title }}</h4>
+                                <p>{{ service.description }}</p>
                             </div><!-- end issue -->
-
-                            <div class="service-wrap clearfix">
-                                <img src="{% static 'uploads/barber_service_05.jpg' %}" alt="" class="img-responsive img-rounded alignleft">
-                                <h4>forming the beard</h4>
-                                <p>Etiam materials ut mollis tellus, vel posuere nulla. Etiam sit amet lacus vitae massa sodales aliquam at eget quam. Integer ultricies et magna quis.</p>
-                            </div><!-- end issue -->
-
-                            <div class="service-wrap lastchild clearfix">
-                                <img src="{% static 'uploads/barber_service_06.jpg' %}" alt="" class="img-responsive img-rounded alignleft">
-                                <h4>hair wash</h4>
-                                <p>Etiam materials ut mollis tellus, vel posuere nulla. Etiam sit amet lacus vitae massa sodales aliquam at eget quam. Integer ultricies et magna quis.</p>
-                            </div><!-- end issue -->
+                            {% endfor %}
                         </div><!-- end col -->
                     </div>
 
                     <hr class="invis4">
 
                     <div class="text-center">
-                        <a href="#services" data-scroll class="btn btn-light btn-radius btn-brd grd1 effect-1">APPOINTMENT NOW</a>
+                        <a href="{% url 'appointment' %}" data-scroll class="btn btn-light btn-radius btn-brd grd1 effect-1">APPOINTMENT NOW</a>
                     </div>
                 </div><!-- end container -->
             </div><!-- end section -->
