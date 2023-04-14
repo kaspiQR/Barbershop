@@ -30,4 +30,8 @@ def contact(request):
 
 
 def services(request):
-    return render(request, 'services.html')
+    service_list = Service.objects.all()
+    context = {
+        'services': service_list
+    }
+    return render(request, 'services.html', context=context)
